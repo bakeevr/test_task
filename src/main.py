@@ -19,5 +19,5 @@ table_data = [
     (i + 1, country, gdp) for i, (country, gdp) in enumerate(l.items())
 ]
 
-headers = ["country", "gdp"]
+headers = ["country", report]
 output_table(table_data, headers=headers)
