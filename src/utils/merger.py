@@ -4,8 +4,6 @@ def merge_data(*data: dict[str, int]) -> dict[str, int]:
     """
     result = {}
     for d in data:
-        result.update(d)
+        if isinstance(d, dict):
+            result.update(d)
     return result
-
-
-
