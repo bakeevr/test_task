@@ -12,6 +12,6 @@ def read_csv(path: str) -> list[dict[str, str]]:
             return result
     except PermissionError as err:
         print(f'Доступ {err.filename} к файлу запрещен')
-        return []
+        exit(-5)
 
 

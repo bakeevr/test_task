@@ -17,6 +17,7 @@ except FileNotFoundError as err:
     print('Файл с данным именем не найден!\n'
           'Проверьте правильность имени файла',
           err.filename)
+    exit(-3)
 
 l = merge_data(*result)
 
@@ -26,3 +27,4 @@ table_data = [
 
 headers = ["country", report]
 output_table(table_data, headers=headers)
+exit(0)
