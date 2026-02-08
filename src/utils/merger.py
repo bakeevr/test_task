@@ -7,6 +7,3 @@ def merge_data(*data: dict[str, int]) -> dict[str, int]:
         if isinstance(d, dict):
             result.update(d)
     return result
-
-
-
