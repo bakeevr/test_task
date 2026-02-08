@@ -10,8 +10,13 @@ res = args.files
 report = args.avg[8:]
 result = []
 
-for d in res:
-    result.append(calc_avg(read_csv(f"{PATH}{d}"), report))
+try:
+    for d in res:
+        result.append(calc_avg(read_csv(f"{PATH}{d}"), report))
+except FileNotFoundError as err:
+    print('Файл с данным именем не найден!\n'
+          'Проверьте правильность имени файла',
+          err.filename)
 
 l = merge_data(*result)
 
